@@ -196,7 +196,7 @@ FTP传输默认是明文传输，包括客户端发送给服务器用于鉴权�
 ![UDP和TCP对应用层报文的处理](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/UDP%E5%92%8CTCP%E5%AF%B9%E5%BA%94%E7%94%A8%E5%B1%82%E6%8A%A5%E6%96%87%E7%9A%84%E5%A4%84%E7%90%86.png)
 
 ## UDP首部和TCP首部的对比
-![image](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/UDP%E9%A6%96%E9%83%A8%E5%92%8CTCP%E9%A6%96%E9%83%A8%E7%9A%84%E5%AF%B9%E6%AF%94.png)
+![UDP首部和TCP首部的对比](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/UDP%E9%A6%96%E9%83%A8%E5%92%8CTCP%E9%A6%96%E9%83%A8%E7%9A%84%E5%AF%B9%E6%AF%94.png)
 
 ## UDP和TCP对数据传输可靠性的支持情况
 ![UDP和TCP对数据传输可靠性的支持情况](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/UDP%E5%92%8CTCP%E5%AF%B9%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E5%8F%AF%E9%9D%A0%E6%80%A7%E7%9A%84%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5.png)
@@ -252,7 +252,7 @@ FTP传输默认是明文传输，包括客户端发送给服务器用于鉴权�
 ## 四次挥手过程
 
 ![四次挥手过程](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png)
-- 假设TCP客户进,主动关闭TCP连接,TCP客户进程会发送连接释放报文段并进入终止等待1状态
+- 假设TCP客户进程,主动关闭TCP连接,TCP客户进程会发送连接释放报文段并进入终止等待1状态
     - **TCP连接释放报文段**首部中的**终止标志位FIN**和**确认标志位ACK**的值都被设置为1.表明这是一个**TCP连接释放报文段**,同时也对之前收到的TCP报文段进行确认.
     - **序号seq**字段的值设置为u,它等于TCP客户进程之前已经传送过的数据的最后一个字节的序号加1
     - TCP规定**终止标志位FIN**等于1的TCP报文段即使不携带数据,也要消耗掉一个序号.
@@ -290,3 +290,47 @@ net.ipv4.tcp_fin_timeout 修改系默认的 TIMEOUT 时间
 ```
 然后执行 /sbin/sysctl -p 让参数生效.
 简单来说，就是打开系统的TIMEWAIT重用和快速回收。
+
+# 网络层
+网络层的主要任务是**实现网络互连**,进而**实现数据包在各网络之间的传输**
+要实现网络层任务,需要解决以下主要问题:
+- 网络层向运输层提供怎样的服务(可靠传输还是不可靠传输)
+- 网络层寻址问题
+- 路由选择问题
+
+## 网际控制报文协议ICMP
+- 为了更有效地发送IP数据报(网际层)和提高交付成功的机会,在网际层使用了网际控制报文协议ICMP.
+- 主机或路由器使用ICMP来发送**差错报告报文**和**询问报文**.
+- **ICMP报文被封装在IP数据报**中发送.
+
+ICMP差错报告报文共有以下五种:
+- 终点不可达
+    - 当路由器
+- 源点抑制
+- 时间超过
+- 参数问题
+- 改变路由(重定向)
+
+## 网络适配器和MAC地址
+### 网络适配器
+![网络适配器](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E7%BD%91%E7%BB%9C%E9%80%82%E9%85%8D%E5%99%A8.png)
+### 网络适配器
+![网络适配器](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E7%BD%91%E7%BB%9C%E9%80%82%E9%85%8D%E5%99%A82.png)
+### mac1
+![mac1](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%801.png)
+### mac2
+![mac2](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%802.png)
+### mac3
+![mac3](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%803.png)
+### mac4
+![mac4](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%804.png)
+### mac5
+![mac5](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%805.png)
+### mac地址6_单播mac地址
+![mac地址6_单播mac地址.png](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%806_%E5%8D%95%E6%92%ADmac%E5%9C%B0%E5%9D%80.png)
+### mac地址7_广播mac地址
+![mac地址7_广播mac地址](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%807_%E5%B9%BF%E6%92%ADmac%E5%9C%B0%E5%9D%80.png)
+### mac地址8_多播mac地址
+![mac地址8_多播mac地址.png](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%808_%E5%A4%9A%E6%92%ADmac%E5%9C%B0%E5%9D%80.png)
+### mac地址9_总结
+![mac地址9_总结.png](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%809_%E6%80%BB%E7%BB%93.png)
