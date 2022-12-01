@@ -334,3 +334,35 @@ ICMP差错报告报文共有以下五种:
 ![mac地址8_多播mac地址.png](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%808_%E5%A4%9A%E6%92%ADmac%E5%9C%B0%E5%9D%80.png)
 ### mac地址9_总结
 ![mac地址9_总结.png](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/mac%E5%9C%B0%E5%9D%809_%E6%80%BB%E7%BB%93.png)
+
+## IPv4地址和MAC地址
+### 封装位置
+![IPv4地址与MAC地址1_封装位置](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/IPv4%E5%9C%B0%E5%9D%80%E4%B8%8EMAC%E5%9C%B0%E5%9D%801_%E5%B0%81%E8%A3%85%E4%BD%8D%E7%BD%AE.png)
+
+### 数据包传送过程中IPv4地址与MAC地址的变化情况
+![数据包传送过程中IPv4地址与MAC地址的变化情况](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/IPv4%E5%9C%B0%E5%9D%80%E4%B8%8EMAC%E5%9C%B0%E5%9D%802_%E6%95%B0%E6%8D%AE%E5%8C%85%E4%BC%A0%E9%80%81%E8%BF%87%E7%A8%8B%E4%B8%ADIPv4%E5%9C%B0%E5%9D%80%E4%B8%8EMAC%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%98%E5%8C%96%E6%83%85%E5%86%B5.png)
+
+### 数据包传送过程中IPv4地址与MAC地址的变化情
+![数据包传送过程中IPv4地址与MAC地址的变化情](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/IPv4%E5%9C%B0%E5%9D%80%E4%B8%8EMAC%E5%9C%B0%E5%9D%803_%E6%95%B0%E6%8D%AE%E5%8C%85%E4%BC%A0%E9%80%81%E8%BF%87%E7%A8%8B%E4%B8%ADIPv4%E5%9C%B0%E5%9D%80%E4%B8%8EMAC%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%98%E5%8C%96%E6%83%85%E5%86%B5.png)
+
+### IPv4地址和MAC地址的关系
+![IPv4地址和MAC地址的关系](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/IPv4%E5%9C%B0%E5%9D%80%E4%B8%8EMAC%E5%9C%B0%E5%9D%804_%E5%85%B3%E7%B3%BB.png)
+
+## 地址解析协议ARP
+### 无ARP协议
+![image](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90%E5%8D%8F%E8%AE%AE_1_%E6%97%A0%E6%B3%95%E5%A1%AB%E5%86%99%E7%9B%AE%E7%9A%84MAC%E5%9C%B0%E5%9D%80.png)
+
+### ARP高速缓存表
+![ARP高速缓存表](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90%E5%8D%8F%E8%AE%AE_2_ARP%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98%E8%A1%A8.png)
+
+### RP请求报文(广播)
+![RP请求报文(广播)](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90%E5%8D%8F%E8%AE%AE_3_ARP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87(%E5%B9%BF%E6%92%AD).png)
+
+### ARP响应报文(单播)
+![ARP响应报文(单播)](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90%E5%8D%8F%E8%AE%AE_4_ARP%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87(%E5%8D%95%E6%92%AD).png)
+
+### ARP缓存表分类和生命周期
+![ARP缓存表分类和生命周期](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90%E5%8D%8F%E8%AE%AE_5_ARP%E7%BC%93%E5%AD%98%E8%A1%A8%E5%88%86%E7%B1%BB%E5%92%8C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png)
+
+### ARP总结
+![ARP总结](https://assetsasda.oss-cn-guangzhou.aliyuncs.com/network/%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90%E5%8D%8F%E8%AE%AE_6_ARP%E6%80%BB%E7%BB%93.png)
