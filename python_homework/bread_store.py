@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+from bob.bob import Store
+
+
+class BreadStore(Store):
+    def __init__(self, goods, num, store_name="面包店"):
+        self.storeName = store_name
+        self.goods = goods
+        self.num = num
+
+if __name__ == '__main__':
+    pass
